@@ -1,7 +1,5 @@
 plot1 <- function(df)
 {
-  # df Should be loaded using loadDateFrame method.
-  
   png("plot1.png")
   hist(df$Global_active_power, col = "red",
        ylab = "Frequency",
@@ -9,3 +7,6 @@ plot1 <- function(df)
        main = "Global Active Power")
   dev.off()
 }
+
+source("loadDataFrame.R")
+plot1(loadDataFrame("~/Downloads/household_power_consumption.txt"))

@@ -39,8 +39,6 @@ plotReactivePower <- function(df)
 
 plot4 <- function(df)
 {
-  # df Should be loaded using loadDateFrame method.
-  
   png("plot4.png")
   par(mfrow = c(2,2))
   plotActivePower(df)
@@ -49,3 +47,7 @@ plot4 <- function(df)
   plotReactivePower(df)
   dev.off()
 }
+
+
+source("loadDataFrame.R")
+plot4(loadDataFrame("~/Downloads/household_power_consumption.txt"))

@@ -1,7 +1,5 @@
 plot3 <- function(df)
 {
-  # df Should be loaded using loadDateFrame method.
-  
   png("plot3.png")
   plot(df$DateTime, df$Sub_metering_1, type="n",
        ylim = c(0, max(df$Sub_metering_1, df$Sub_metering_2, df$Sub_metering_3)),
@@ -16,3 +14,7 @@ plot3 <- function(df)
          legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
   dev.off()
 }
+
+
+source("loadDataFrame.R")
+plot3(loadDataFrame("~/Downloads/household_power_consumption.txt"))
