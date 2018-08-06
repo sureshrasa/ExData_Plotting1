@@ -39,6 +39,8 @@ plotReactivePower <- function(df)
 
 plot4 <- function(df)
 {
+  # df Should be loaded using loadDateFrame method.
+  
   png("plot4.png")
   par(mfrow = c(2,2))
   plotActivePower(df)

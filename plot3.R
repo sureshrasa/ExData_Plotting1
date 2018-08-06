@@ -1,5 +1,7 @@
 plot3 <- function(df)
 {
+  # df Should be loaded using loadDateFrame method.
+  
   png("plot3.png")
   plot(df$DateTime, df$Sub_metering_1, type="n",
        ylim = c(0, max(df$Sub_metering_1, df$Sub_metering_2, df$Sub_metering_3)),
